@@ -1,10 +1,12 @@
 /**
  * Body CSS
  */
+ @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;400;700&display=swap');
 
  html,
  body {
    height: 100%;
+   font-family: 'Mukta', sans-serif;
  }
 
  html,
@@ -17,13 +19,17 @@
    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
  }
 
+ .author {
+  font-size: .8rem;
+ }
+
 
  /**
   * Sidebar CSS
   */
 
  #sidebar {
-   background-color: #E57373;
+   background-color: #e5a273;
    padding: 15px;
  }
 

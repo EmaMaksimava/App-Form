@@ -1,3 +1,4 @@
+import { Question } from './question';
 import './style.css';
 import { isValid } from './utils';
 
@@ -22,10 +23,9 @@ function submitFormHeandler(event){
 
     btnSubmit.disabled = true;
     // Async request to server to save question
+    Question.create(question).then(clearForm());
 
-    console.log('Question', question);
 
-    clearForm();
   };
 }
 

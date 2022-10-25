@@ -65,6 +65,6 @@ function renderModalAfterAuth(content){
   if (typeof content === 'string'){
     createModal('Error', 'Wrong email or password!')
   } else {
-    createModal('List of your questions:', content);
+    createModal('List of your questions:', Question.createHTMLList(content));
   }
 }

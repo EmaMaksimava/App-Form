@@ -43,6 +43,12 @@ export class Question {
 
     addToMainList(html);
   }
+
+  static createHTMLList(questions){
+    return questions.length
+    ? `<ol>${questions.map((elem) => `<li>${elem.text}</li>`).join('')} </ol>`
+    : 'Вопросов пока нет.'
+  }
 }
 
 function addToLocalStorage(question) {

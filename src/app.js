@@ -1,16 +1,22 @@
 import { Question } from './question';
 import './style.css';
-import { isValid } from './utils';
+import { createModal, isValid } from './utils';
 
 const form = document.getElementById('form');
+const modalBtn = document.getElementById('modal-btn');
 const input = form.querySelector('#label-question');
 const btnSubmit = form.querySelector('#submit');
 
+//Events
+
+modalBtn.addEventListener('click', openModal);
 window.addEventListener('load', Question.renderList);
 form.addEventListener('submit', submitFormHeandler);
 input.addEventListener('input', () => {
   btnSubmit.disabled = !isValid(input.value);
 })
+
+//Functions
 
 function submitFormHeandler(event){
   event.preventDefault();
@@ -33,4 +39,8 @@ function clearForm() {
   input.value = '';
   input.className = '';
   btnSubmit.disabled = true;
+}
+
+function openModal() {
+  createModal("user", 'id');
 }

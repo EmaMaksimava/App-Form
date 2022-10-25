@@ -36,6 +36,16 @@
   right: 50px;
  }
 
+ .modal-window {
+  margin: 150px auto;
+  overflow-y: auto;
+  max-width: 600px;
+  max-height: 450px;
+  background-color: #e8dbd2;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(172, 17, 17, 0.573);
+ }
+
 
  /**
   * Sidebar CSS

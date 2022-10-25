@@ -23,6 +23,12 @@
   font-size: .8rem;
  }
 
+ .subheader {
+  color: #e5a273;
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(172, 17, 17, 0.573);
+ }
+
 
  /**
   * Sidebar CSS

@@ -17,6 +17,7 @@
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+   position: relative;
  }
 
  .author {
@@ -27,6 +28,12 @@
   color: #e5a273;
   text-transform: uppercase;
   text-shadow: 0 2px 4px rgba(172, 17, 17, 0.573);
+ }
+
+ .floating-btn {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
  }
 
 

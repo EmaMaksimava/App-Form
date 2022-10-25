@@ -1,3 +1,4 @@
+import { getAuthForm } from './auth';
 import { Question } from './question';
 import './style.css';
 import { createModal, isValid } from './utils';
@@ -42,5 +43,5 @@ function clearForm() {
 }
 
 function openModal() {
-  createModal("user", 'id');
+  createModal("Autorization", getAuthForm());
 }

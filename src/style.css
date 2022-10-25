@@ -46,6 +46,19 @@
   box-shadow: 0 2px 4px rgba(172, 17, 17, 0.573);
  }
 
+ .modal-window h1 {
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+ }
+
+ .modal-context{
+  padding: 30px;
+  text-align: left;
+  color: rgb(73, 73, 73);
+  font-size: 2rem;
+ }
+
 
  /**
   * Sidebar CSS

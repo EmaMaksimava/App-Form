@@ -50,11 +50,21 @@ function openModal() {
 function authFormHandler(event) {
   event.preventDefault();
 
+  const authBtn = event.target.querySelector('button');
   const email = event.target.querySelector("#email").value;
   const password = event.target.querySelector("#password").value;
 
+  authBtn.disabled = true;
   authWithEmailAndPassword(email, password)
-    .then(token ={
-      
-    })
+    .then(Question.fetch)
+    .then(renderModalAfterAuth)
+    .then(() => authBtn.disabled = false)
+}
+
+function renderModalAfterAuth(content){
+  if (typeof content === 'string'){
+    createModal('Error', 'Wrong email or password!')
+  } else {
+    createModal('List of your questions:', content);
+  }
 }

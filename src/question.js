@@ -23,7 +23,7 @@ export class Question {
     return fetch(`https://podcast-questions-app-8133c-default-rtdb.firebaseio.com/questions.json?auth=${token}`)
     .then(response => response.json())
     .then(response => {
-      if (response.error) {
+      if (response && response.error) {
         return `<p class="error">${response.error}</p>`
       }
 
@@ -46,7 +46,7 @@ export class Question {
 
   static createHTMLList(questions){
     return questions.length
-    ? `<ol>${questions.map((elem) => `<li>${elem.text}</li>`).join('')} </ol>`
+    ? `<ol>${questions.map((elem) => `<li class="list-item">${elem.text}</li>`).join('')} </ol>`
     : 'Вопросов пока нет.'
   }
 }

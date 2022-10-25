@@ -5,7 +5,7 @@ export function isValid(value) {
 export function createModal(title, context) {
   const modal = document.createElement('div');
   const content = `
-  <h1>${title}</h1>
+  <h1 class=>${title}</h1>
   <div class="modal-context">${context}</div>
   `;
   modal.classList.add('modal-window');
